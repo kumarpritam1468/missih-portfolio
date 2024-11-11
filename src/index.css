@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "courier prime", monospace;
+    overflow-x: hidden;
+    background: #171717;
+    /* I've added 2 good blues, u can change according to your choice too */
+    /* color: rgb(0, 157, 255); */
+    color: rgb(0, 115, 255);
+}
+
+.navlink{
+    text-decoration: none;
+    @apply hover:-translate-y-0.5 transition duration-300 ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(5, 46, 22);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #242424;
+}
+
+@media screen and (min-width:1440px) {
+    html {
+        font-size: 130%;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width:640px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 70%;
+    }
+
+}
