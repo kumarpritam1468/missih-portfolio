@@ -15,8 +15,8 @@ body{
     overflow-x: hidden;
     background: #171717;
     /* I've added 2 good blues, u can change according to your choice too */
-    /* color: rgb(0, 157, 255); */
-    color: rgb(0, 115, 255);
+    color: rgb(0, 157, 255);
+    /* color: rgb(0, 115, 255); */
 }
 
 .navlink{
@@ -43,7 +43,7 @@ body{
 
 @media screen and (min-width:1440px) {
     html {
-        font-size: 130%;
+        font-size: 115%;
     }
 }
 
