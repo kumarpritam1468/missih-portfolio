@@ -1,16 +1,21 @@
-const Navbar = () => {
-  return (
-    <nav className=" h-20 px-32 w-full flex items-center justify-between border-b border-b-blue-600">
-        <h1 className=" text-2xl flex gap-2">
-            FirstName <span className=" hidden md:block">Lastname</span>
-        </h1>
+import { Twirl as Hamburger } from 'hamburger-react'
+import useStore from '../data/store';
 
-        <div className=" flex gap-12 text-2xl">
-            <a href="#hero" className="navlink">Home</a>
-            <a href="#blogs" className="navlink">Blogs</a>
-            <a href="#projects" className="navlink">Projects</a>
-            <a href="#contact" className="navlink">About</a>
-        </div>
+const Navbar = () => {
+  const {menuOpen, setMenuOpen} = useStore();
+
+  return (
+    <nav className="">
+      <div className=' fixed z-30 top-6 right-8' onClick={() => setMenuOpen(!menuOpen)}>
+        <Hamburger rounded />
+      </div>
+
+      <div className={`flex fixed flex-col justify-center items-center top-0 z-20 border-l border-l-blue-600 h-screen bg-[#171717] w-[300px] 2xl:w-[400px] max-md:w-screen gap-12 text-3xl ${menuOpen ? 'right-0' : '-right-96 max-md:-right-full'} transition-all duration-500 ease-in-out`}>
+        <a href="#hero" className="navlink">Home</a>
+        <a href="#blogs" className="navlink">Articles</a>
+        <a href="#projects" className="navlink">Projects</a>
+        <a href="#contact" className="navlink">About me</a>
+      </div>
     </nav>
   )
 }

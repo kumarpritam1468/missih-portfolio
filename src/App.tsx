@@ -1,12 +1,14 @@
+import Articles from "./components/Articles"
 import Hero from "./components/Hero"
-// import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar"
 
 function App() {
 
   return (
     <main>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
+      <Articles />
     </main>
   )
 }
