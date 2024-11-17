@@ -1,6 +1,7 @@
-import Articles from "./components/Articles"
+// import Articles from "./components/Articles"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import Projects from "./components/Projects"
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <main>
       <Navbar />
       <Hero />
-      <Articles />
+      <Projects />
+      {/* <Articles /> */}
     </main>
   )
 }
