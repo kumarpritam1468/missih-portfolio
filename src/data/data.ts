@@ -29,20 +29,18 @@ export const projects = [
     },
 ]
 
-export const articles = [
-    {
-        title: "Article title 1",
-        description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
-        path: "/article/0",
-    },
-    {
-        title: "Article title 2",
-        description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
-        path: "/article/1",
-    },
-    {
-        title: "Article title 3",
-        description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
-        path: "/article/2",
-    },
+type ArticleObj = {
+    title: string,
+    description: string,
+    path: string
+}
+
+export const articles: ArticleObj[] = [
+    // {
+    //     title: "Article title 1",
+    //     description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
+    //     path: "/article/0",
+    // },
+
+    // When you will add arcticles here in above format then they will automatically get rendered and displayed instead of hand image and no articles message, I have developed them is such a way that they can be added and removed without making changes in the future.
 ]
