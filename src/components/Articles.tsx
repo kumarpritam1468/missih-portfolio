@@ -2,7 +2,7 @@ import { TypeAnimation } from "react-type-animation"
 import { Terminal } from "lucide-react";
 import useStore from "../data/store";
 import { articles } from "../data/data";
-import { hand } from "../data/ascii";
+import { car } from "../data/ascii";
 
 const Articles = () => {
     const { menuOpen } = useStore();
@@ -52,12 +52,12 @@ const Articles = () => {
                     </>
                 ) : (
                     <div className=" size-full py-7 flex flex-col justify-center items-center gap-10">
-                        <p className=" whitespace-pre text-[4.5px]">
-                            {hand}
+                        <p className=" whitespace-pre text-[3px]">
+                            {car}
                         </p>
 
                         <h2 className=" text-xl">
-                            I've not written any articles yet, stay tuned
+                            Articles in progress...
                         </h2>
                     </div>
                 )}

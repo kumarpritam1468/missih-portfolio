@@ -44,3 +44,18 @@ export const articles: ArticleObj[] = [
 
     // When you will add arcticles here in above format then they will automatically get rendered and displayed instead of hand image and no articles message, I have developed them is such a way that they can be added and removed without making changes in the future.
 ]
+
+export const timeline = [
+    {
+        title:"Oct-Dec, 2023",
+        desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, debitis dolore inventore ab ducimus earum et fugiat voluptas iusto. Architecto neque deserunt mollitia aut, qui molestiae quasi optio eius."
+    },
+    {
+        title:"Jan-Mar, 2024",
+        desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, debitis dolore inventore ab ducimus earum et fugiat voluptas iusto. Architecto neque deserunt mollitia aut, qui molestiae quasi optio eius."
+    },
+    {
+        title:"Apr-Jun, 2024",
+        desc:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, debitis dolore inventore ab ducimus earum et fugiat voluptas iusto. Architecto neque deserunt mollitia aut, qui molestiae quasi optio eius."
+    },
+]
