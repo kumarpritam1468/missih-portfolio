@@ -1,20 +1,18 @@
-import Articles from "./components/Articles"
-import Contact from "./components/Contact"
-import Hero from "./components/Hero"
+import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Projects from "./components/Projects"
-import Timeline from "./components/Timeline"
+import Home from "./pages/Home"
+import ProjectPage from "./pages/ProjectPage"
+
 
 function App() {
 
   return (
     <main>
       <Navbar />
-      <Hero />
-      <Projects />
-      <Timeline />
-      <Articles />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/:index" element={<ProjectPage />} />
+      </Routes>
     </main>
   )
 }
