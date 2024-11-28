@@ -6,7 +6,7 @@ const Hero = () => {
   const { menuOpen } = useStore();
 
   return (
-    <section className=" h-fit mb-8 pt-12 flex gap-4 justify-center items-center">
+    <section className=" h-fit mb-8 pt-12 flex gap-4 justify-center items-center" id="hero">
 
       <div className={`flex gap-20 py-8 px-12 ml-6 max-md:mr-6 h-fit w-[1024px] 2xl:w-[1200px] border-blue-600 border-x-2 rounded-3xl items-center relative ${menuOpen ? "md:mr-[324px] 2xl:mr-[424px]" : "md:mr-6"} transition-all duration-500 ease-in-out`}>
         <div className=" bg-[#171717] absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
