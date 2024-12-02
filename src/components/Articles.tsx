@@ -3,6 +3,7 @@ import { Terminal } from "lucide-react";
 import useStore from "../data/store";
 import { articles } from "../data/data";
 import { car } from "../data/ascii";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
     const { menuOpen } = useStore();
@@ -38,10 +39,10 @@ const Articles = () => {
                                             {article.description}
                                         </h2>
 
-                                        <button className=" flex gap-3 items-center bg-[#171717] border-2 border-blue-500 text-xl px-6 py-2 w-fit rounded-lg hover:rounded-3xl transition-all duration-300 ease-in-out">
+                                        <Link to={`/article/${index}`} className=" flex gap-3 items-center bg-[#171717] border-2 border-blue-500 text-lg px-4 py-1.5 w-fit rounded-lg hover:rounded-3xl transition-all duration-500 ease-in-out">
                                             <Terminal />
                                             Read More
-                                        </button>
+                                        </Link>
                                     </div>
                                 </div>
 
