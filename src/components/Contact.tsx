@@ -23,13 +23,13 @@ const Contact = () => {
                     <div className={`flex items-center w-full my-4 pl-4 py-1 `} >
                         <div className=" flex flex-col gap-1">
                             <h3 className=" text-2xl">Email:</h3>
-                            <p className=" text-base opacity-70">youremail@gmail.com</p>
+                            <p className=" text-base opacity-70">simy.46.dev@gmail.com</p>
                         </div>
                     </div>
                     <div className={`flex items-center w-full my-4 pl-4 py-1 `} >
                         <div className=" flex flex-col gap-1">
-                            <h3 className=" text-2xl">Phone:</h3>
-                            <p className=" text-base opacity-70">+0123456789</p>
+                            <h3 className=" text-2xl">Github:</h3>
+                            <p className=" text-base opacity-70">simy46</p>
                         </div>
                     </div>
                     <div className={`flex items-center w-full my-4 pl-4 py-1 `} >

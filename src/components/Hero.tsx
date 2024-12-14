@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className=" text-3xl tracking-wider flex items-start gap-5"><span className=" text-3xl">$</span>
             <TypeAnimation
               sequence={[
-                'Your Name here',
+                'simy46_',
                 1000,
               ]}
               speed={60}
@@ -42,7 +42,7 @@ const Hero = () => {
               sequence={[
                 // Same substring at the start will only be typed once, initially
                 1000,
-                'Other details here Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt corrupti autem animi officia sapiente hic qui harum eum esse.',
+                'Computer Science Student',
                 1000,
               ]}
               speed={75}

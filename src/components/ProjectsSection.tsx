@@ -30,15 +30,17 @@ const ProjectsSection = () => {
                         </div>
 
                         <div className=" hidden group-hover:flex items-center gap-6">
+                            <Link to={`/project/${index}`} className=" flex gap-3 items-center bg-transparent border-2 border-blue-500 text-sm px-3 py-1 w-fit rounded-lg">
+                                <Terminal />
+                                More Details
+                            </Link>
+
                             {project.inProgress ?
                                 <p className=" text-base opacity-70">[In Progress]</p> :
                                 <ArrowUpRightFromSquare className=" mr-6 opacity-70 cursor-pointer" />
                             }
 
-                            <Link to={`/project/${index}`} className=" flex gap-3 items-center bg-transparent border-2 border-blue-500 text-sm px-3 py-1 w-fit rounded-lg">
-                                <Terminal />
-                                More Details
-                            </Link>
+                            
                         </div>
                     </div>
                 ))}
