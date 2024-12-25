@@ -17,10 +17,15 @@ html{
 body{
     font-family: "courier prime", monospace;
     overflow-x: hidden;
-    background: #171717;
+    background: rgb(0, 0, 0);
     /* I've added 2 good blues, u can change according to your choice too */
     color: rgb(0, 157, 255);
     /* color: rgb(0, 115, 255); */
+}
+
+::selection{
+    color: rgb(0, 157, 255);
+    background: white;
 }
 
 .navlink{

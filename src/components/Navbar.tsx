@@ -13,7 +13,7 @@ const Navbar = () => {
         <Hamburger rounded />
       </div>
 
-      <div className={`flex fixed flex-col justify-center items-center top-0 z-40 border-l border-l-blue-600 h-screen bg-[#171717] w-[300px] 2xl:w-[400px] max-md:w-screen gap-12 text-3xl ${menuOpen ? 'right-0' : '-right-96 max-md:-right-full'} transition-all duration-500 ease-in-out`}>
+      <div className={`flex fixed flex-col justify-center items-center top-0 z-40 border-l border-l-blue-600 h-screen bg-black w-[300px] 2xl:w-[400px] max-md:w-screen gap-12 text-3xl ${menuOpen ? 'right-0' : '-right-96 max-md:-right-full'} transition-all duration-500 ease-in-out`}>
         <a href="/#hero" className="navlink">Home</a>
         <a href="/#articles" className={`navlink ${!showExtra ? 'hidden' : ''}`}>Articles</a>
         <a href="/rabbit-hole" className="navlink">Rabbit Hole</a>
