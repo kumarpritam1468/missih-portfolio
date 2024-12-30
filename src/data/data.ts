@@ -1,7 +1,7 @@
 type ArticleObj = {
     title: string;
     description: string;
-    longerDesc: string;
+    longerDesc: string[];
     path?: string;
 }
 
@@ -18,6 +18,7 @@ type ProjectObj = {
     inProgress: boolean;
 }
 
+// IMPORTANT NOTE : Large description is array of strings, one string should be one paragraph, and inside paragraph where u need next line add \n there, the program will handle it
 export const projects: ProjectObj[] = [
     {
         heading: "VagaPunk Robot - Embedded System Introduction",
@@ -72,17 +73,17 @@ export const projects: ProjectObj[] = [
 ];
 
 
-
+// IMPORTANT NOTE : Large description is array of strings, one string should be one paragraph, and inside paragraph where u need next line add \n there, the program will handle it
 export const articles: ArticleObj[] = [
     // {
     //     title: "Article title 1",
     //     description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
-    //     longerDesc: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
+    //     longerDesc: ["More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod."],
     // },
     // {
     //     title: "Article title 2",
     //     description: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
-    //     longerDesc: "More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
+    //     longerDesc: ["More Detials here Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod."],
     // },
 
     // When you will add arcticles here in above format then they will automatically get rendered and displayed instead of hand image and no articles message, I have developed them is such a way that they can be added and removed without making changes in the future.

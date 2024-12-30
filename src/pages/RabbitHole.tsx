@@ -30,25 +30,25 @@ const initialNodes = [
 
 const initialEdges = [
   // Connections from Machine Learning
-  { id: 'e1-4', source: '1', target: '4', style: { stroke: 'rgb(176, 224, 255)' } },
-  { id: 'e1-5', source: '1', target: '5', style: { stroke: 'rgb(176, 224, 255)' } },
+  { id: 'e1-4', source: '1', target: '4', style: { stroke: 'rgb(204, 255, 204)' } },
+  { id: 'e1-5', source: '1', target: '5', style: { stroke: 'rgb(204, 255, 204)' } },
   
   // Connections from Data Science
-  { id: 'e2-6', source: '2', target: '6', style: { stroke: 'rgb(176, 224, 255)' } },
-  { id: 'e2-7', source: '2', target: '7', style: { stroke: 'rgb(176, 224, 255)' } },
+  { id: 'e2-6', source: '2', target: '6', style: { stroke: 'rgb(204, 255, 204)' } },
+  { id: 'e2-7', source: '2', target: '7', style: { stroke: 'rgb(204, 255, 204)' } },
   
   // Connections from AI Ethics
-  { id: 'e3-8', source: '3', target: '8', style: { stroke: 'rgb(176, 224, 255)' } },
-  { id: 'e3-9', source: '3', target: '9', style: { stroke: 'rgb(176, 224, 255)' } },
-  { id: 'e3-10', source: '3', target: '10', style: { stroke: 'rgb(176, 224, 255)' } },
+  { id: 'e3-8', source: '3', target: '8', style: { stroke: 'rgb(204, 255, 204)' } },
+  { id: 'e3-9', source: '3', target: '9', style: { stroke: 'rgb(204, 255, 204)' } },
+  { id: 'e3-10', source: '3', target: '10', style: { stroke: 'rgb(204, 255, 204)' } },
 ];
 
 export default function RabbitHole() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   const onConnect = useCallback(
-    (params:any) => setEdges((eds) => addEdge({ ...params, style: { stroke: 'rgb(176, 224, 255)' } }, eds)),
+    (params:any) => setEdges((eds) => addEdge({ ...params, style: { stroke: 'rgb(204, 255, 204)' } }, eds)),
     [setEdges],
   );
 
@@ -59,11 +59,12 @@ export default function RabbitHole() {
           .custom-node {
             padding: 10px;
             border-radius: 5px;
-            color: rgb(176, 224, 255);
+            color: rgb(204, 255, 204);
           }
           .react-flow__node-default {
             background: black;
-            border: 2px solid rgb(0, 157, 255);
+            border: 2px solid rgb(89, 238, 95);
+            box-shadow: 0 0 1rem #22c55e;
           }
         `}
       </style>

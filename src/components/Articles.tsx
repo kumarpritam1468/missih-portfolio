@@ -4,6 +4,7 @@ import useStore from "../data/store";
 import { articles } from "../data/data";
 import { car } from "../data/ascii";
 import { Link } from "react-router-dom";
+import Container from "./Container";
 
 const Articles = () => {
     const { menuOpen } = useStore();
@@ -11,12 +12,12 @@ const Articles = () => {
     return (
         <section className=" h-fit mt-14 mb-8 flex gap-4 justify-center items-center w-full" id="articles">
 
-            <div className={`flex flex-col py-10 px-14 ml-6 max-md:mr-6 h-fit w-[1024px] 2xl:w-[1200px] border-blue-600 border-x-2 rounded-3xl items-center relative ${menuOpen ? "md:mr-[324px] 2xl:mr-[424px]" : "md:mr-6"} transition-all duration-500 ease-in-out `}>
+            <Container menuOpen={menuOpen}>
                 <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 px-4">
                     <TypeAnimation
                         sequence={[
                             1000,
-                            "Articles",
+                            "Articles:~",
                         ]}
                         speed={50}
                         cursor={false}
@@ -40,14 +41,14 @@ const Articles = () => {
                                             {article.description}
                                         </h2>
 
-                                        <Link to={`/article/${index}`} className=" flex gap-3 items-center bg-black border-2 border-blue-500 text-lg px-4 py-1.5 w-fit rounded-lg hover:rounded-3xl transition-all duration-500 ease-in-out">
+                                        <Link to={`/article/${index}`} className=" flex gap-3 items-center bg-black border-2 border-green-500 text-lg px-4 py-1.5 w-fit rounded-lg hover:rounded-3xl transition-all duration-500 ease-in-out">
                                             <Terminal />
                                             Read More
                                         </Link>
                                     </div>
                                 </div>
 
-                                {index !== articles.length - 1 && <div className=" h-[.75px] w-full bg-blue-600 my-10"></div>}
+                                {index !== articles.length - 1 && <div className=" h-[.75px] w-full bg-green-600 my-10"></div>}
                             </>
 
                         ))}
@@ -63,7 +64,7 @@ const Articles = () => {
                         </h2>
                     </div>
                 )}
-            </div>
+            </Container>
 
         </section >
     )
