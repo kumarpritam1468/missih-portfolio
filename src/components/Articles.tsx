@@ -13,15 +13,34 @@ const Articles = () => {
         <section className=" h-fit mt-14 mb-8 flex gap-4 justify-center items-center w-full" id="articles">
 
             <Container menuOpen={menuOpen}>
-                <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 px-4">
+                <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
                     <TypeAnimation
                         sequence={[
-                            1000,
-                            "Articles:~",
+                            'simy46@simy-debian:',
                         ]}
                         speed={50}
                         cursor={false}
                     />
+                    <span className="text-blue-700 ml-2">
+                        <TypeAnimation
+                            sequence={[
+                                1000,
+                                '~/Articles',
+                            ]}
+                            speed={50}
+                            cursor={false}
+                        />
+                    </span>
+                    <span className=" ml-2">
+                        <TypeAnimation
+                            sequence={[
+                                1500,
+                                '$',
+                            ]}
+                            speed={50}
+                            cursor={false}
+                        />
+                    </span>
                 </div>
                 {articles.length > 0 ? (
                     <>

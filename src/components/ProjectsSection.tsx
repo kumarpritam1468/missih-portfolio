@@ -15,12 +15,31 @@ const ProjectsSection = () => {
                 <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
                     <TypeAnimation
                         sequence={[
-                            500,
-                            'Projects:~',
+                            'simy46@simy-debian:',
                         ]}
                         speed={50}
                         cursor={false}
                     />
+                    <span className="text-blue-700 ml-2">
+                        <TypeAnimation
+                            sequence={[
+                                1000,
+                                '~/Projects',
+                            ]}
+                            speed={50}
+                            cursor={false}
+                        />
+                    </span>
+                    <span className=" ml-2">
+                        <TypeAnimation
+                            sequence={[
+                                1500,
+                                '$',
+                            ]}
+                            speed={50}
+                            cursor={false}
+                        />
+                    </span>
                 </div>
 
                 {projects.map((project, index) => (

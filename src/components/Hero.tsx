@@ -13,15 +13,35 @@ const Hero = () => {
         <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
           <TypeAnimation
             sequence={[
-              'Home:~',
+              'simy46@simy-debian:',
             ]}
             speed={50}
             cursor={false}
           />
+          <span className="text-blue-700 ml-2">
+            <TypeAnimation
+              sequence={[
+                1000,
+                '~/Home',
+              ]}
+              speed={50}
+              cursor={false}
+            />
+          </span>
+          <span className=" ml-2">
+            <TypeAnimation
+              sequence={[
+                1500,
+                '$',
+              ]}
+              speed={50}
+              cursor={false}
+            />
+          </span>
         </div>
 
         <div className=" w-full bg-slate-800 h-60 mb-16 text-center text-2xl relative">
-            <img src="/banner.png" alt="" className=" size-full object-cover border-[1.5px] rounded-md border-green-500 " />
+          <img src="/banner.png" alt="" className=" size-full object-cover border-[1.5px] rounded-md border-green-500 " />
 
           <div className=" absolute bg-black -bottom-14 left-10 size-28 rounded-full overflow-hidden flex items-center justify-center ring-[2px] ring-green-500 ring-offset-2 ring-offset-black shadow-[0_0_3rem_#22c55e]">
             <img src="/dp3.png" alt="" className=" object-contain w-28" />

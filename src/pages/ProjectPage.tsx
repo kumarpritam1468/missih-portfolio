@@ -17,14 +17,34 @@ const ProjectPage = () => {
         <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
           <TypeAnimation
             sequence={[
-              `${project.heading}:~`,
+              'simy46@simy-debian:',
             ]}
             speed={50}
             cursor={false}
           />
+          <span className="text-blue-700 ml-2">
+            <TypeAnimation
+              sequence={[
+                1000,
+                `~/${project.heading}`,
+              ]}
+              speed={50}
+              cursor={false}
+            />
+          </span>
+          <span className=" ml-2">
+            <TypeAnimation
+              sequence={[
+                1500,
+                '$',
+              ]}
+              speed={50}
+              cursor={false}
+            />
+          </span>
         </div>
 
-        <div className=" flex flex-col gap-12 pt-6">
+        <div className=" flex flex-col gap-12 pt-12">
           {/* <h3 className=" text-3xl flex items-start gap-5"><span className=" text-4xl">$</span>Welcome to my portfolio</h3> */}
 
           <h1 className=" text-3xl tracking-wider flex items-start">
@@ -42,7 +62,7 @@ const ProjectPage = () => {
             {project.largeDesc.map((line, index) => (
               <div className=" flex items-start gap-5" key={index}>
                 <span className=" text-3xl text-green-400">$</span>
-                <p>{line.split("\n").map((line, index) => <span key={index}>{line}<br /></span>)}</p>
+                <p>{line.split("\n").map((line, index) => <span key={index}> {line}<br /></span>)}</p>
               </div>
             ))}
           </h2>
