@@ -74,7 +74,7 @@ const Articles = () => {
                     </>
                 ) : (
                     <div className=" size-full py-7 flex flex-col justify-center items-center gap-10">
-                        <p className=" whitespace-pre text-[3px]">
+                        <p className=" whitespace-pre text-[3px] max-md:text-[2px]">
                             {car}
                         </p>
 

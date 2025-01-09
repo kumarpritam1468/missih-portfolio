@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className=' fixed z-50 top-6 right-8' onClick={() => setMenuOpen(!menuOpen)}>
+      <div className=' fixed z-50 top-6 right-8 max-md:scale-75 ' onClick={() => setMenuOpen(!menuOpen)}>
         <Hamburger rounded />
       </div>
 

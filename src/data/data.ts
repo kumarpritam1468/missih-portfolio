@@ -18,6 +18,15 @@ type ProjectObj = {
     inProgress: boolean;
 }
 
+interface ContentData {
+    title: string;
+    content: string;
+}
+
+interface ContentDataMap {
+    [key: string]: ContentData;
+}
+
 // IMPORTANT NOTE : Large description is array of strings, one string should be one paragraph, and inside paragraph where u need next line add \n there, the program will handle it
 export const projects: ProjectObj[] = [
     {
@@ -116,3 +125,48 @@ export const timeline: TimelineObj[] = [
         desc: "I am still learning engineering and computers. I joined a club. Our role is to implement a method for Rust to communicate with the PYNQ-Z2 (FPGA) and handle memory access efficiently. This solution will save significant time and resources. We are working with the AXI Bus, and each team member has specific tasks assigned to contribute to the project."
     }
 ]
+
+// Example detailed content - replace with your data.ts content
+export const contentData: ContentDataMap = {
+    '1': {
+        title: 'Machine Learning',
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+    },
+    '2': {
+        title: 'Data Science',
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+    },
+    '3': {
+        title: 'AI Ethics',
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+    },
+    '4': {
+        title: 'Machine Learning',
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+    },
+    '5': {
+        title: 'Data Science',
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+    },
+    '6': {
+        title: 'AI Ethics',
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+    },
+    '7': {
+        title: 'Machine Learning',
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+    },
+    '8': {
+        title: 'Data Science',
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+    },
+    '9': {
+        title: 'AI Ethics',
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+    },
+    '10': {
+        title: 'AI Ethics',
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+    },
+    // Add content for all nodes (4-10)
+};

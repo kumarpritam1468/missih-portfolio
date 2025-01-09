@@ -7,7 +7,7 @@ const Hero = () => {
   const { menuOpen } = useStore();
 
   return (
-    <section className=" h-fit mb-8 pt-12 flex gap-4 justify-center items-center" id="hero">
+    <section className=" h-fit mb-8 pt-12 max-md:pt-28 flex gap-4 justify-center items-center" id="hero">
 
       <Container menuOpen={menuOpen}>
         <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
@@ -40,10 +40,10 @@ const Hero = () => {
           </span>
         </div>
 
-        <div className=" w-full bg-slate-800 h-60 mb-16 text-center text-2xl relative">
+        <div className=" w-full bg-slate-800 h-60 max-md:h-32 mb-16 max-md:mb-10 text-center text-2xl relative">
           <img src="/banner.png" alt="" className=" size-full object-cover border-[1.5px] rounded-md border-green-500 " />
 
-          <div className=" absolute bg-black -bottom-14 left-10 size-28 rounded-full overflow-hidden flex items-center justify-center ring-[2px] ring-green-500 ring-offset-2 ring-offset-black shadow-[0_0_3rem_#22c55e]">
+          <div className=" absolute bg-black -bottom-14 max-md:-bottom-10 left-10 size-28 max-md:size-20 rounded-full overflow-hidden flex items-center justify-center ring-[2px] ring-green-500 ring-offset-2 ring-offset-black shadow-[0_0_3rem_#22c55e]">
             <img src="/dp3.png" alt="" className=" object-contain w-28" />
           </div>
         </div>

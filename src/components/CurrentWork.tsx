@@ -8,8 +8,8 @@ const CurrentWork = () => {
         <section className=" h-fit my-14 flex gap-4 justify-center items-center">
 
             <div className={`
-      flex gap-12 items-start py-8 px-20 ml-6 max-md:mr-6 
-      h-fit w-[1024px] 2xl:w-[1200px] 
+      flex max-md:flex-col gap-12 items-start py-8 px-20 ml-6 max-md:mr-6 
+      h-fit max-md:w-[95vw] w-[1024px] 2xl:w-[1200px] 
       border-green-600 border-x-2 rounded-3xl relative
       shadow-[20px_0_20px_-20px_#22c55e,-20px_0_20px_-20px_#22c55e]
       ${menuOpen ? "md:mr-[324px] 2xl:mr-[424px]" : "md:mr-6"}

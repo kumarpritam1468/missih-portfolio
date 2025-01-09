@@ -16,7 +16,7 @@ html{
 
 body{
     font-family: "courier prime", monospace;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     background: rgb(5, 5, 5);
     /* I've added 2 good blues, u can change according to your choice too */
     /* color: rgb(0, 157, 255); */
@@ -60,19 +60,25 @@ body{
 
 @media screen and (max-width:1080px) {
     html {
-        font-size: 90%;
+        font-size: 85%;
     }
 }
 
 @media screen and (max-width:640px) {
     html {
-        font-size: 80%;
+        font-size: 70%;
     }
 }
 
 @media screen and (max-width:400px) {
     html {
-        font-size: 70%;
+        font-size: 60%;
     }
 
+}
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
+    }
 }

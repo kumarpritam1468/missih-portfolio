@@ -43,7 +43,7 @@ const ProjectsSection = () => {
                 </div>
 
                 {projects.map((project, index) => (
-                    <div className={`flex justify-between select-none items-center w-full my-3 px-4 py-1 group hover:bg-green-600/20`} key={index}>
+                    <div className={`flex max-md:flex-col max-md:gap-5 max-md:items-start justify-between select-none items-center w-full my-3 max-md:my-2 px-4 py-1 group lg:hover:bg-green-600/20`} key={index}>
                         <div className=" flex flex-col gap-1">
                             <div className="flex gap-5 ">
                                 <span><Terminal size={20} className=" mt-1.5" /></span>
@@ -53,8 +53,8 @@ const ProjectsSection = () => {
                             <p className=" ml-10 text-sm text-green-300">{project.date}</p>
                         </div>
 
-                        <div className=" hidden group-hover:flex flex-shrink-0 items-center gap-6">
-                            <Link to={`/project/${index}`} className=" flex gap-3 items-center bg-transparent border-2 border-green-500 text-sm px-3 py-1 w-fit rounded-lg">
+                        <div className=" flex opacity-0 max-lg:opacity-100 max-lg:scale-90 max-md:scale-75 group-hover:opacity-100 flex-shrink-0 items-center gap-6 transition-all">
+                            <Link to={`/project/${index}`} className=" flex gap-3 items-center bg-transparent border-2 border-green-500 text-sm max-md:text-lg px-3 py-1 w-fit rounded-lg">
                                 <Terminal />
                                 More Details
                             </Link>

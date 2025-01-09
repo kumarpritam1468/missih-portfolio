@@ -8,7 +8,7 @@ const Timeline = () => {
     return (
         <section className=" h-fit my-14 flex gap-4 justify-center items-center">
 
-            <div className={`flex gap-8 pb-8 pt-12 px-12 ml-6 max-md:mr-6 h-fit w-[1024px] 2xl:w-[1200px] border-green-600 border-x-2 rounded-3xl relative ${menuOpen ? "md:mr-[324px] 2xl:mr-[424px]" : "md:mr-6"} transition-all duration-500 ease-in-out shadow-[20px_0_20px_-20px_#22c55e,-20px_0_20px_-20px_#22c55e]`}>
+            <div className={`flex gap-8 pb-8 pt-12 px-12 ml-6 max-md:mr-6 h-fit max-md:w-[95vw] w-[1024px] 2xl:w-[1200px] border-green-600 border-x-2 rounded-3xl relative ${menuOpen ? "md:mr-[324px] 2xl:mr-[424px]" : "md:mr-6"} transition-all duration-500 ease-in-out shadow-[20px_0_20px_-20px_#22c55e,-20px_0_20px_-20px_#22c55e]`}>
 
                 <div className=" bg-black absolute left-8 -top-3.5 text-2xl z-20 pl-4 pr-2">
                     <TypeAnimation
