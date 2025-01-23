@@ -1,7 +1,14 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 import { TypeAnimation } from "react-type-animation"
 // import { missih_github } from "../data/ascii"
 import useStore from "../data/store";
 import Container from "./Container";
+import { BookOpenCheck, CodeXml, Eye } from "lucide-react";
 
 const Hero = () => {
   const { menuOpen } = useStore();
@@ -52,33 +59,65 @@ const Hero = () => {
           {missih_github}
         </p> */}
 
-        <div className=" flex flex-col w-full gap-6">
-          {/* <h3 className=" text-3xl flex items-start gap-5"><span className=" text-4xl">$</span>Welcome to my portfolio</h3> */}
+        <div className=" w-full h-fit flex justify-between items-end">
+          <div className=" flex flex-col w-full gap-6">
+            <h1 className=" text-3xl tracking-wider flex items-start gap-5"><span className=" text-3xl">$</span>
+              <TypeAnimation
+                sequence={[
+                  'simy46_',
+                  1000,
+                ]}
+                speed={60}
+                cursor={false}
+              />
+            </h1>
 
-          <h1 className=" text-3xl tracking-wider flex items-start gap-5"><span className=" text-3xl">$</span>
-            <TypeAnimation
-              sequence={[
-                'simy46_',
-                1000,
-              ]}
-              speed={60}
-              cursor={false}
-            />
-          </h1>
+            <h2 className=" text-xl flex items-start gap-5 text-green-500">
+              <span className=" text-3xl">$</span>
+              <TypeAnimation
+                sequence={[
+                  1000,
+                  'Computer Science Student',
+                  1000,
+                ]}
+                speed={75}
+                cursor={false}
+              />
+            </h2>
+          </div>
 
-          <h2 className=" text-xl flex items-start gap-5 text-green-500">
-            <span className=" text-3xl">$</span>
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed once, initially
-                1000,
-                'Computer Science Student',
-                1000,
-              ]}
-              speed={75}
-              cursor={false}
-            />
-          </h2>
+          <div className=" flex gap-6 items-center">
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild className=" cursor-pointer">
+                    <Eye />
+                  </TooltipTrigger>
+                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
+                    <p>Views : 1,754</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild className=" cursor-pointer">
+                    <BookOpenCheck />
+                  </TooltipTrigger>
+                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
+                    <p>Books Read : 17</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild className=" cursor-pointer">
+                    <CodeXml />
+                  </TooltipTrigger>
+                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
+                    <p>Programming Languages Known : 7</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+          </div>
         </div>
       </Container>
 

@@ -21,6 +21,7 @@ type ProjectObj = {
 interface ContentData {
     title: string;
     content: string;
+    imgSrc?: string;
 }
 
 interface ContentDataMap {
@@ -130,43 +131,53 @@ export const timeline: TimelineObj[] = [
 export const contentData: ContentDataMap = {
     '1': {
         title: 'Machine Learning',
-        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.',
+        imgSrc:"/hacker.png"
     },
     '2': {
         title: 'Data Science',
-        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.',
+        imgSrc:"/hacker.png"
     },
     '3': {
         title: 'AI Ethics',
-        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.',
+        imgSrc:"/hacker.png"
     },
     '4': {
         title: 'Machine Learning',
-        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.',
+        imgSrc:"/hacker.png"
     },
     '5': {
         title: 'Data Science',
-        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.',
+        imgSrc:"/hacker.png"
     },
     '6': {
         title: 'AI Ethics',
-        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.',
+        imgSrc:"/hacker.png"
     },
     '7': {
         title: 'Machine Learning',
-        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.'
+        content: 'Machine Learning is a subset of artificial intelligence that focuses on developing systems that can learn and improve from experience without being explicitly programmed.',
+        imgSrc:"/hacker.png"
     },
     '8': {
         title: 'Data Science',
-        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.'
+        content: 'Data Science combines domain expertise, programming skills, and knowledge of mathematics and statistics to extract meaningful insights from data.',
+        imgSrc:"/hacker.png"
     },
     '9': {
         title: 'AI Ethics',
-        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.',
+        imgSrc:"/hacker.png"
     },
     '10': {
         title: 'AI Ethics',
-        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.'
+        content: 'AI Ethics deals with the moral principles and guidelines that govern the development and deployment of artificial intelligence systems.',
+        imgSrc:"/hacker.png"
     },
     // Add content for all nodes (4-10)
 };

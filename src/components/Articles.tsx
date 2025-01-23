@@ -74,12 +74,12 @@ const Articles = () => {
                     </>
                 ) : (
                     <div className=" size-full py-7 flex flex-col justify-center items-center gap-10">
-                        <p className=" whitespace-pre text-[3px] max-md:text-[2px]">
+                        <p className=" whitespace-pre text-[2px] max-md:text-[2px]">
                             {car}
                         </p>
 
                         <h2 className=" text-xl">
-                            Articles in progress...
+                            Still learning...
                         </h2>
                     </div>
                 )}
