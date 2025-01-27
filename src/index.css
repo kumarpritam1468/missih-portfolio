@@ -4,17 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: "courier prime", monospace;
     overflow-x: hidden !important;
     background: rgb(5, 5, 5);
@@ -25,12 +25,18 @@ body{
     color: #59EE5F;
 }
 
-::selection{
+::selection {
     color: black;
     background: rgb(173, 255, 182);
 }
 
-.navlink{
+@keyframes dash {
+    to {
+        stroke-dashoffset: -300;
+    }
+}
+
+.navlink {
     text-decoration: none;
     @apply hover:-translate-y-0.5 transition duration-300 ease-in-out;
 }
@@ -78,7 +84,7 @@ body{
 }
 
 @layer base {
-  :root {
+    :root {
         --radius: 0.5rem;
     }
 }
