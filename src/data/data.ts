@@ -181,3 +181,12 @@ export const contentData: ContentDataMap = {
     },
     // Add content for all nodes (4-10)
 };
+
+
+
+export const welcomeText = [
+    "Hello, lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod.",
+    "Hello, demo text goes here, lorem ipsum dolor sit amet consectetur elit. Quos, quod.",
+    "Hello, lorem ipsum dolor sit dwdubv s8d7yg2s asyagsyagsb elit. Quos, quod.",
+    "Hello, lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, quod",
+]

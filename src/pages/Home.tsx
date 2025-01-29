@@ -1,3 +1,4 @@
+import Welcome from "@/pages/Welcome"
 import Articles from "../components/Articles"
 import Contact from "../components/Contact"
 import CurrentWork from "../components/CurrentWork"
@@ -8,6 +9,7 @@ import Timeline from "../components/Timeline"
 const Home = () => {
     return (
         <>
+            <Welcome />
             <Hero />
             <ProjectsSection />
             <CurrentWork />
