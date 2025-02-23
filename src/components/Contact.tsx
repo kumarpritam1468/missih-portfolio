@@ -1,9 +1,32 @@
 import { TypeAnimation } from "react-type-animation"
 import useStore from "../data/store";
 import { Github, Instagram, Send, Twitter } from "lucide-react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const { menuOpen } = useStore();
+    const [isPending, setIsPending] = useState(false);
+    const form = useRef<HTMLFormElement | any>(null);
+
+    const sendEmail = (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsPending(true);
+
+        emailjs
+            .sendForm('service_c5jkb27', 'template_bx8hzfq', form.current, {
+                publicKey: 'BC1W1_o-ZhTvmX3Ke',
+            })
+            .then(
+                () => {
+                    setIsPending(false);
+                },
+                (error) => {
+                    setIsPending(false);
+                    console.log(error);
+                },
+            );
+    };
     return (
         <section className=" h-fit my-14 flex gap-4 justify-center items-center" id="contact">
 
@@ -59,14 +82,15 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className=" w-1/2 max-md:w-full flex flex-col items-center gap-6">
-                    <textarea className=" w-full border border-green-600 bg-transparent rounded-xl p-4 placeholder:text-green-400/70 focus:outline-none focus:rounded-3xl transition-all duration-300 resize-none" placeholder="Type Message Here_" rows={6}></textarea>
+                <form className=" w-1/2 max-md:w-full flex flex-col items-center gap-6" onSubmit={sendEmail} ref={form}>
+                    <input type="text" name="from_name" className=" w-full border border-green-600 bg-transparent rounded-xl p-4 placeholder:text-green-400/70 focus:outline-none focus:rounded-3xl transition-all duration-300" placeholder="Your Email_" />
+                    <textarea className=" -mt-3 w-full border border-green-600 bg-transparent rounded-xl p-4 placeholder:text-green-400/70 focus:outline-none focus:rounded-3xl transition-all duration-300 resize-none" placeholder="Type Message Here_" name="message" rows={6}></textarea>
 
-                    <button className=" flex gap-3 items-center bg-transparent border border-green-500 text-sm px-3 py-2 w-fit rounded-lg hover:rounded-[2rem] transition-all duration-500">
+                    <button className=" flex gap-3 items-center bg-transparent border border-green-500 text-sm px-3 py-2 w-fit rounded-lg hover:rounded-[2rem] transition-all duration-500" type="submit">
                         <Send size={20} strokeWidth={1} />
-                        Send Message
+                        {isPending ? 'Sending...' : 'Send Message'}
                     </button>
-                </div>
+                </form>
             </div>
 
         </section>
