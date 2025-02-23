@@ -1,14 +1,8 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
 import { TypeAnimation } from "react-type-animation"
 // import { missih_github } from "../data/ascii"
 import useStore from "../data/store";
 import Container from "./Container";
-import { BookOpenCheck, CodeXml, Eye } from "lucide-react";
+import Stats from "./Stats";
 
 const Hero = () => {
   const { menuOpen } = useStore();
@@ -86,38 +80,7 @@ const Hero = () => {
             </h2>
           </div>
 
-          <div className=" flex gap-6 items-center">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild className=" cursor-pointer">
-                    <Eye />
-                  </TooltipTrigger>
-                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
-                    <p>Views : 1,754</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild className=" cursor-pointer">
-                    <BookOpenCheck />
-                  </TooltipTrigger>
-                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
-                    <p>Books Read : 17</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild className=" cursor-pointer">
-                    <CodeXml />
-                  </TooltipTrigger>
-                  <TooltipContent className=" text-base border border-green-600 text-green-500 bg-black" >
-                    <p>Programming Languages Known : 7</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-          </div>
+          <Stats />
         </div>
       </Container>
 

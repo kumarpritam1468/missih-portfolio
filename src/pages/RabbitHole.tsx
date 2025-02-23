@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import {
   ReactFlow,
   Controls,
@@ -24,11 +24,13 @@ import { contentData } from "../data/data"
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useSwipeable } from 'react-swipeable';
 import { motion, AnimatePresence } from "framer-motion";
-import {initialNodes, initialEdges} from "@/lib/graphConfig.ts";
+import {initialNodes, initialEdges, initialNodesMobile} from "@/lib/graphConfig.ts";
+import { useMediaQuery } from 'react-responsive';
 
 
 export default function RabbitHole(): JSX.Element {
-  const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, _setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = useState<Node | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -41,6 +43,12 @@ export default function RabbitHole(): JSX.Element {
   //     ),
   //   [setEdges]
   // );
+
+  useEffect(() => {
+    if(isMobile){
+      setNodes(initialNodesMobile);
+    }
+  }, []);
 
   const onNodeClick: NodeMouseHandler = useCallback((_event: any, node: Node) => {
     setSelectedNode(node);
@@ -93,7 +101,7 @@ export default function RabbitHole(): JSX.Element {
             background: black;
             border: 2px solid rgb(89, 238, 95);
             box-shadow: 0 0 3rem rgba(34, 197, 94, .6);
-            font-size: .8rem;
+            font-size: 16px;
             padding: 10px;
             border-radius: 1rem;
             color: rgb(204, 255, 204);
